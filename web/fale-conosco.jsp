@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Contato</title>
@@ -30,7 +30,8 @@
                     <p class="text-center text-capitalize ">E-mail: vandomarinho.vm@gmail.com</p>
                 </hgroup>
                 </div>                 
-                <nav class="navbar-fixed-top">
+                <nav class="navbar-fixed-top" >
+                    <p>Escola CONHECIMENTOÉAQUI</p>
                     <ul class="list-inline ">
                         <li><a  href="index.jsp">Home</a></li>                        
                         <li class="dropdown">
@@ -45,7 +46,8 @@
                         <li><a href="historia.jsp">História</a></li>
                         <li><a href="secretaria.jsp">Scretaria</a></li>
                         <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
-                    </ul>                   
+                        <li><a href="TurmaCtr?action=inserir">Turma</a></li>
+                    </ul>
                 </nav>
             </header>
         </div>
