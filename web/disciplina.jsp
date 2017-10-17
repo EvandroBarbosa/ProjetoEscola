@@ -1,13 +1,13 @@
 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html: charset=ISO-8859-1" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />       
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>JSP Page</title>
+        <title>Pagina Da Disciplina</title>
         <link rel="stylesheet" href="Css/bootstrap-3.3.7-dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="Css/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="Css/StyleHome.css"/>
@@ -24,23 +24,24 @@
                 <hgroup>
                     <h1>Cadastro das Disciplinas</h1>                    
                 </hgroup>
-                </div>
-                
-                <nav class="navbar-fixed-top">
+                </div>               
+                 <nav class="navbar-fixed-top" >
+                    <p>Escola CONHECIMENTOÉAQUI</p>
                     <ul class="list-inline ">
-                        <li><a href="index.jsp">Home</a></li>                        
+                        <li><a  href="index.jsp">Home</a></li>                        
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                Cadastre-se Aqui <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="AlunoCtr?action=listaAluno">Alunos</a></li>
+                            Cadastre-se Aqui <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">                            
+                           <li><a href="AlunoCtr?action=listaAluno">Alunos</a></li>
                             <li><a href="DisciplinaCtr?action=listaDisciplina">Disciplinas</a></li>
                             <li><a href="FuncionarioCtr?action=listaFuncionario">Funcionários</a></li>
-                            </ul>                            
+                        </ul>                            
                         </li>
                         <li><a href="historia.jsp">História</a></li>
                         <li><a href="secretaria.jsp">Scretaria</a></li>
                         <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
+                        <li><a href="TurmaCtr?action=inserir">Turma</a></li>
                     </ul>
                 </nav>
             </header>
@@ -54,27 +55,27 @@
                 </div>
                 <div class="form-group">
                     <label>codigo Disciplina</label>
-                    <input class="form-control input-lg" type="text" name="codigoDisc" placeholder="Informe o codigo da disciplina" value="<c:out value="${obDisc.codigoDisc}"/>"/>
+                    <input class="form-control input-lg" type="text" name="codigoDisc" maxlength="8" placeholder="Informe o codigo da disciplina" value="<c:out value="${obDisc.codigoDisc}"/>" required=""/>
                 </div>
                 <div class="form-group">
                     <label>Nome</label>
-                    <input class="form-control input-lg" type="" name="nomeDisc" placeholder="Informe o nome da disciplina" value="<c:out value="${obDisc.nomeDisc}"/>"/>
+                    <input class="form-control input-lg" type="" name="nomeDisc" placeholder="Informe o nome da disciplina" value="<c:out value="${obDisc.nomeDisc}"/>" required=""/>
                 </div>
                 <div class="form-group">
                     <label>Data Cadastro</label>
-                    <input class="form-control" type="date" name="dataCadastroDisc" value="<fmt:formatDate pattern="yyyy-MM-dd" value="${obDisc.dataCadastroDisc}"/>"/>
+                    <input class="form-control" type="date" name="dataCadastroDisc" value="<fmt:formatDate pattern="yyyy-MM-dd" value="${obDisc.dataCadastroDisc}"/>" required=""/>
                 </div>
                 <div class="form-group">
                     <label>Carga Horária</label>
-                    <input class="form-control input-lg" type="text" name="cargaHorariaDisc" placeholder="Informe a carga Horária" value="<c:out value="${obDisc.cargaHorariaDisc}"/>"/>
+                    <input class="form-control input-lg" type="text" name="cargaHorariaDisc" placeholder="Informe a carga Horária" value="<c:out value="${obDisc.cargaHorariaDisc}"/>" required=""/>
                 </div>
                 <div class="form-group">
                     <label>Descrição</label>
-                    <textarea class="form-control" rows="6"  name="descricaoDisc" placeholder="Descreva sobre a máteria"  ><c:out value="${obDisc.descricaoDisc}"/></textarea>
+                    <textarea class="form-control" rows="6"  name="descricaoDisc" placeholder="Descreva sobre a máteria" required=""><c:out value="${obDisc.descricaoDisc}"/></textarea>
                 </div>
                 <div class="form-group">
                     <label>Contéudo</label>
-                    <textarea class="form-control" rows="6" name="conteudoDisc" placeholder="Informe o contéudo ministrado nessa materia"><c:out value="${obDisc.conteudoDisc}"/></textarea>
+                    <textarea class="form-control" rows="6" name="conteudoDisc" placeholder="Informe o contéudo ministrado nessa materia" required=""><c:out value="${obDisc.conteudoDisc}"/></textarea>
                 </div>
                 <div class="btn">
                     <input class="btn-lg bg-primary" type="submit" value="Enviar" />

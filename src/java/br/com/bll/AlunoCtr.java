@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -55,6 +56,7 @@ public class AlunoCtr extends HttpServlet{
         }
         req.setAttribute("valorSexo", "M");
         RequestDispatcher view = req.getRequestDispatcher(emFrente);
+        req.setAttribute("obListAluno", aDao.listAluno());
         view.forward(req, resp);
     }
     
@@ -68,16 +70,23 @@ public class AlunoCtr extends HttpServlet{
             e.printStackTrace();
         }
         
+        int matricula = 0;
+        
+            matricula =  new Random().nextInt(9999);
+        
+        String matriculaAluno="";
+        matriculaAluno = Integer.toString(matricula);
         all.setSexoAluno(req.getParameter("sexoAluno"));
         all.setEnderecoAluno(req.getParameter("enderecoAluno"));
         all.setTelefoneAluno(req.getParameter("telefoneAluno"));
-        all.setMatriculaAluno(req.getParameter("matriculaAluno"));
+        all.setMatriculaAluno(matriculaAluno);
         all.setCpfAluno(req.getParameter("cpfAluno"));
         String cod = req.getParameter("codigo");
       
-        if (cod != null || cod.isEmpty()) {
+        if (cod == null || cod.isEmpty()) {
             aDao.addAluno(all);
-        }else{
+        }
+        else{
             all.setCodigo(Integer.parseInt(cod));
             aDao.updateAluno(all);
         }

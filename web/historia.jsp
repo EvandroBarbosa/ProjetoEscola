@@ -6,10 +6,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Historia da Escola</title>
         <link rel="stylesheet" href="Css/bootstrap-3.3.7-dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="Css/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
@@ -27,7 +28,8 @@
                     <h1 class="h1 ">História da Escola</h1>                    
                 </hgroup>
                 </div>                 
-                <nav class="navbar-fixed-top">
+                <nav class="navbar-fixed-top" >
+                    <p>Escola CONHECIMENTOÉAQUI</p>
                     <ul class="list-inline ">
                         <li><a  href="index.jsp">Home</a></li>                        
                         <li class="dropdown">
@@ -42,6 +44,7 @@
                         <li><a href="historia.jsp">História</a></li>
                         <li><a href="secretaria.jsp">Scretaria</a></li>
                         <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
+                        <li><a href="TurmaCtr?action=inserir">Turma</a></li>
                     </ul>
                 </nav>
             </header>
@@ -49,17 +52,17 @@
         <div class="col-sm-8" id="menu">
             <section class="col-md-9 table-bordered">
             
-            <h3>Como Foi Que Começou a Escola</h3>
+                <h3><b>Como Foi Que Começou a Escola</b></h3>
                 <p>
                     A escola (do grego scholé, através do termo latino schola) 
                     é uma instituição concebida para o ensino de alunos sob a 
-                    direção de professores.[1] A maioria dos países tem sistemas 
+                    direção de professores. A maioria dos países tem sistemas 
                     formais de educação, que geralmente são obrigatórios. Nestes 
                     sistemas, os estudantes progridem através de uma série de níveis 
                     escolares e sucessivos. Os nomes para esses níveis nas escolas
                     variam por país, mas geralmente incluem o ensino fundamental (
                     ensino básico) para crianças e o ensino médio (ensino secundário)
-                    para os adolescentes que concluíram o fundamental.[2] Uma 
+                    para os adolescentes que concluíram o fundamental. Uma 
                     instituição onde o ensino superior é ensinado, é comumente 
                     chamada de faculdade ou universidade.
                 </p>

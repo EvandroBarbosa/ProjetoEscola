@@ -75,7 +75,7 @@ public class FuncionarioCtr extends HttpServlet{
             e.printStackTrace();
         }
         String cod = req.getParameter("codigo");
-        if (cod != null || cod.isEmpty()) {
+        if (cod == null || cod.isEmpty()) {
             funcDao.addFuncionario(func);
             
         }else{

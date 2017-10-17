@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html; charset=ISO-8859-1" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="Css/bootstrap-3.3.7-dist/css/bootstrap.theme.min.css"/>
         <link rel="stylesheet" href="Css/StyleHome.css"/>        
         <script src="Css/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https:ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>         
     </head>
     <body>
@@ -23,6 +23,7 @@
                 </hgroup>
                 </div>                 
                 <nav class="navbar-fixed-top" >
+                    <p>Escola CONHECIMENTOÉAQUI</p>
                     <ul class="list-inline ">
                         <li><a  href="index.jsp">Home</a></li>                        
                         <li class="dropdown">
@@ -37,6 +38,7 @@
                         <li><a href="historia.jsp">História</a></li>
                         <li><a href="secretaria.jsp">Scretaria</a></li>
                         <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
+                        <li><a href="TurmaCtr?action=inserir">Turma</a></li>
                     </ul>
                 </nav>
             </header>
@@ -44,7 +46,7 @@
         <div class="col-sm-12">
             <div class="col-sm-4">
                 <section class="table-bordered afbt">
-                    <h2>ALfabetização</h2>
+                    <h2>Alfabetização</h2>
                     <p class="text-justify">
                         A alfabetização ou literacia consiste 
                         no aprendizado do alfabeto e de sua 
@@ -61,7 +63,7 @@
                     </p>
                     <article id="alfa">
                         <figure>
-                            <img src="Css/imagem/images.png" alt="Alfabetização"/>
+                            <img  class="img-responsive" src="Css/imagem/images.png" alt="Alfabetização"/>
                         </figure>
                     </article>
                 </section>
@@ -83,7 +85,7 @@
                     </p>
                     <article id="funda">
                         <figure>
-                            <img src="Css/imagem/funda.png" alt="Ensino fundamental"/>
+                            <img class="img-responsive" src="Css/imagem/funda.png" alt="Ensino fundamental"/>
                         </figure>
                     </article>
                 </section>
@@ -101,7 +103,7 @@
                     </p>
                     <article id="medio">
                         <figure>
-                            <img src="Css/imagem/logo_medio.png" alt="Ensino Médio"/>
+                            <img class="img-responsive" src="Css/imagem/logo_medio.png" alt="Ensino Médio"/>
                         </figure>
                     </article>
                 </section>

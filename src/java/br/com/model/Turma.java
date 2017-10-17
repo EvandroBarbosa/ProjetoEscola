@@ -7,7 +7,7 @@ package br.com.model;
 public class Turma {
     private int codigo;
     private String idTurma;
-    private Aluno nomeAluno;
+    private Aluno aluno;
     private String periodo;
 
     public int getCodigo() {
@@ -26,12 +26,12 @@ public class Turma {
         this.idTurma = idTurma;
     }
 
-    public Aluno getNomeAluno() {
-        return nomeAluno;
+    public Aluno getAluno() {
+        return aluno;
     }
 
-    public void setNomeAluno(Aluno nomeAluno) {
-        this.nomeAluno = nomeAluno;
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
 
     public String getPeriodo() {

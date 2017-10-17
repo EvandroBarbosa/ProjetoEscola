@@ -32,7 +32,7 @@ public class TurmaDao {
                     + "VALUES(?,?,?) RETURNING id ");
             
             //Seta os valores do objeto
-            ps.setInt(1, turma.getNomeAluno().getCodigo());
+            ps.setInt(1, turma.getAluno().getCodigo());
             ps.setString(2, turma.getPeriodo());
             ps.setString(3, turma.getIdTurma());
             //Cria um resultSet para receber o objeto turma
@@ -64,8 +64,8 @@ public class TurmaDao {
     public void alterar(Turma turma){
         try {
             PreparedStatement ps = cnn.prepareStatement("UPDATE turma SET id_aluno=?, periodo=?,"
-                                                        + " idturma=? WHERE id=? ");
-            ps.setInt(1, turma.getNomeAluno().getCodigo());
+                                                        + "idturma=? WHERE id=? ");
+            ps.setInt(1, turma.getAluno().getCodigo());
             ps.setString(2, turma.getPeriodo());
             ps.setString(3, turma.getIdTurma());
             ps.setInt(4, turma.getCodigo());
@@ -80,15 +80,15 @@ public class TurmaDao {
         Turma tur = new Turma();
         AlunoDao al = new AlunoDao();
         try {
-            PreparedStatement ps = cnn.prepareStatement("SELECT * FROM turma t, aluno al WHERE t.id_aluno = al.id AND id=?");
+            PreparedStatement ps = cnn.prepareStatement("SELECT * FROM turma t, aluno al WHERE t.id_aluno = al.id AND t.id=?");
             ps.setInt(1, cod);
             
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                tur.setCodigo(rs.getInt("codigo"));
-                tur.setNomeAluno(al.listaAlunoCod(rs.getInt("codigo")));
+                tur.setCodigo(rs.getInt("id"));
+                tur.setAluno(al.listaAlunoCod(rs.getInt("id_aluno")));
                 tur.setPeriodo(rs.getString("periodo"));
-                tur.setIdTurma(rs.getString("idTurma"));
+                tur.setIdTurma(rs.getString("idturma"));
             }
         } catch (Exception e) {
             System.out.println("A consulta falhou");
@@ -105,10 +105,11 @@ public class TurmaDao {
             
             while (rs.next()) {                
                 Turma tur = new Turma();
-                tur.setCodigo(rs.getInt("codigo"));
-                tur.setNomeAluno(new AlunoDao().listaAlunoCod(rs.getInt("codigo")));
-                tur.setPeriodo(rs.getString("perido"));
-                tur.setIdTurma(rs.getString("idTurma"));
+                tur.setCodigo(rs.getInt("id"));
+                AlunoDao alu = new AlunoDao();
+                tur.setAluno(alu.listaAlunoCod(rs.getInt("id_aluno")));
+                tur.setPeriodo(rs.getString("periodo"));
+                tur.setIdTurma(rs.getString("idturma"));
                 
                 listTur.add(tur);
             }

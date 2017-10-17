@@ -72,7 +72,7 @@ public class DisciplinaCtr extends HttpServlet{
         disc.setConteudoDisc(req.getParameter("conteudoDisc"));
         
         String cod = req.getParameter("codigo");
-        if (cod != null || cod.isEmpty()) {
+        if (cod == null || cod.isEmpty()) {
             discDao.addDisciplina(disc);
         }else{
             disc.setCodigo(Integer.parseInt(cod));

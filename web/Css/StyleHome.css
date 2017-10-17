@@ -18,20 +18,17 @@ div.col-sm-8#menu article figure img{
     border: 6px solid white;
     box-shadow: 1px 1px 4px black;
 }
-div.col-sm-8#menu section.col-md-8 p {
-    width: 500px;
-    margin:auto;
-    
-}
+
 div.col-sm-8#menu{
    margin: 0px 300px;
-    
+   font-size: 14pt; 
+   text-indent: 30px;
 }
 /*Cabeçalho do top*/
 .jumbotron{
     background-color: #9acfea;
     height: 400px;
-    background: url(../Css/imagem/Book-Printing.jpg) no-repeat;
+    background: url(../Css/imagem/Book-Printing.png) no-repeat;
     width: 100%;
 }
 /*Barra de menus*/
@@ -67,8 +64,11 @@ section.table-bordered{
    background-color: #faf2cc;
 }
 section.afbt{
-  padding: 10px;
-  
+  padding: 10px;   
+}
+section.afbt p{
+  font-size: 14pt;  
+  text-indent: 30px;
 }
 section.afbt:hover{
     -webkit-transform: scale(1.1);
@@ -77,20 +77,20 @@ section.afbt:hover{
 section.afbt article#alfa figure img{
   width: 380px;
   height: 210px;
-   border: 6px solid white;
-   box-shadow: 1px 1px 4px black;
+  border: 6px solid white;
+  box-shadow: 1px 1px 4px black;
 }
 section.afbt article#funda figure img{
   width: 380px;
   height: 230px;
-   border: 6px solid white;
-   box-shadow: 1px 1px 4px black;
+  border: 6px solid white;
+  box-shadow: 1px 1px 4px black;
 }
 section.afbt article#medio figure img{
   width: 380px;
   height: 310px;
-   border: 6px solid white;
-    box-shadow: 1px 1px 4px black;
+  border: 6px solid white;
+  box-shadow: 1px 1px 4px black;
 }
 
 /*Rodapé do site*/
@@ -98,7 +98,7 @@ section.afbt article#medio figure img{
     margin-left: -15px;
     margin-right: -15px;
     background-color: #000; 
-    height: 200px;
+    height: 90px;
     color: white;
     padding: 90px;
     margin-bottom: 0px;
@@ -112,16 +112,19 @@ div.container{
     margin-top: -30px;
     width: 900px;
 }
+
 div.container p{
     text-align: center;
-    font-size: 20pt;
-     
+    font-size: 20pt;     
 }
 div.container.tabela{
     width: 100%;
 }
 
 input.form-control{
+    width: 90%;
+}
+select.form-control{
     width: 90%;
 }
 form{
@@ -142,4 +145,19 @@ ul.dropdown-menu a:hover{
 /*Tabela */
 table.table-hover:hover{
     background-color: antiquewhite;
+}
+
+/*Menu*/
+ul.list-inline{
+    position: relative;
+    margin-left: 300px;
+    margin-top: -40px;
+}
+nav.navbar-fixed-top p{
+    position: relative;    
+    margin-top: 10px;
+    color: #dcdcdc;
+}
+nav.navbar-fixed-top p:hover{
+    color: white;
 }

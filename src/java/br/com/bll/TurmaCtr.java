@@ -12,7 +12,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.ws.Dispatch;
 
 /**
  *
@@ -55,18 +54,18 @@ public class TurmaCtr extends HttpServlet{
        
         RequestDispatcher view = req.getRequestDispatcher(INCLUIR_TURMA);
         req.setAttribute("turmas", tDao.ListarTurma());
-        req.setAttribute("aluno", alDao.listAluno());
+        req.setAttribute("alunos", alDao.listAluno());
         view.forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Turma turma = new Turma();
-        turma.setNomeAluno(new Aluno());
-        
-        turma.getNomeAluno().setCodigo(Integer.parseInt(req.getParameter("codigo")));
-        turma.setPeriodo(req.getParameter("perido"));
-        turma.setIdTurma(req.getParameter("idturma"));
+        turma.setAluno(new Aluno());
+                
+        turma.getAluno().setCodigo(Integer.parseInt(req.getParameter("codAluno")));
+        turma.setPeriodo(req.getParameter("periodo"));
+        turma.setIdTurma(req.getParameter("idTurma"));
         
         String codigo = req.getParameter("codigo");
         

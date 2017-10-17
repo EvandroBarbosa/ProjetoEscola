@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,31 +23,33 @@
              <header class="navbar-header">
                 <div class="menuh">
                     <hgroup>
-                        <h1><img src="Css/imagem/secreta.jpg" /></h1>
+                        <h1>Secretaria Escolar</h1>
                     </hgroup>
                 </div>
-                <nav class="navbar-fixed-top">
+                <nav class="navbar-fixed-top" >
+                    <p>Escola CONHECIMENTOÉAQUI</p>
                     <ul class="list-inline ">
-                        <li><a href="index.jsp">Home</a></li>                        
+                        <li><a  href="index.jsp">Home</a></li>                        
                         <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                Cadastre-se Aqui <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="listaAluno.jsp">Alunos</a></li>
-                            <li><a href="listaDisciplina.jsp">Disciplinas</a></li>
-                            <li><a href="listaFuncionario.jsp">Funcionários</a></li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Cadastre-se Aqui <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">                            
+                           <li><a href="AlunoCtr?action=listaAluno">Alunos</a></li>
+                            <li><a href="DisciplinaCtr?action=listaDisciplina">Disciplinas</a></li>
+                            <li><a href="FuncionarioCtr?action=listaFuncionario">Funcionários</a></li>
                         </ul>                            
                         </li>
                         <li><a href="historia.jsp">História</a></li>
                         <li><a href="secretaria.jsp">Scretaria</a></li>
                         <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
+                        <li><a href="TurmaCtr?action=inserir">Turma</a></li>
                     </ul>
                 </nav>
             </header>
         </div>
         <div class="col-sm-8" id="menu">
             <section class="col-md-9 table-bordered">
-                <h3>Secretária</h3>
+                <h3><b>Secretária</b></h3>
                 <p class="text-justify">
                     É o setor da escola responsável pelos serviços de secretaria que realiza 
                     todas as funções destinadas a manter os registros, os arquivos de documentação 

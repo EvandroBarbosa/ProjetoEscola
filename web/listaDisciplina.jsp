@@ -8,7 +8,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,14 +29,15 @@
                     
                 </hgroup>
                </div>
-                <nav class="navbar-fixed-top">
+                <nav class="navbar-fixed-top" >
+                    <p>Escola CONHECIMENTOÉAQUI</p>
                     <ul class="list-inline ">
-                        <li><a href="index.jsp">Home</a></li>                        
+                        <li><a  href="index.jsp">Home</a></li>                        
                         <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                Cadastre-se Aqui <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="AlunoCtr?action=listaAluno">Alunos</a></li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Cadastre-se Aqui <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">                            
+                           <li><a href="AlunoCtr?action=listaAluno">Alunos</a></li>
                             <li><a href="DisciplinaCtr?action=listaDisciplina">Disciplinas</a></li>
                             <li><a href="FuncionarioCtr?action=listaFuncionario">Funcionários</a></li>
                         </ul>                            
@@ -44,6 +45,7 @@
                         <li><a href="historia.jsp">História</a></li>
                         <li><a href="secretaria.jsp">Scretaria</a></li>
                         <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
+                        <li><a href="TurmaCtr?action=inserir">Turma</a></li>
                     </ul>
                 </nav>
             </header>

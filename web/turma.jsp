@@ -4,7 +4,8 @@
     Author     : Evandro
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html; charset=ISO-8859-1" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +25,7 @@
             <header class="navbar-header">
                 <div class="menuh">
                 <hgroup>
-                    <h1>Cadastro de Alunos</h1>                    
+                    <h1>Cadastro da Turma</h1>                    
                 </hgroup>
                 </div>
                  <nav class="navbar-fixed-top" >
@@ -49,19 +50,60 @@
             </header>
           
         </div>
-        <div>
-            <form method="POST" action="TurmaCtr" name="criaTurma">
-                <label>Id</label><input type="" id="" name="" value="" readonly="" />
-                <label>Nome Aluno</label><input type="" id="" name="" value="" />
-                <label>Periodo</label><input type="" id="" name="" value="" />
-                <label>Classe</label><input type="" id="" name="" value="" />
+        <div class="container">
+             <p class="text-capitalize">necessário preencher o Formulário abaixo!</p>
+            <form method="POST" action="TurmaCtr" name="criarTurma">                   
+                <div class="form-group">                    
+                <label for="id">Id</label><input class="form-control input-lg" type="text" id="id" name="codigo" value="<c:out value="${turma.codigo}"/>" readonly="" />
+                </div>               
+                <div class="form-group">                    
+                <label>Nome Aluno</label>
+                <select class="form-control input-lg" name="codAluno">
+                    <c:forEach items="${alunos}" var="alturma">
+                        <option value="<c:out value="${alturma.codigo}"/>"
+                                ${alturma.codigo == turma.aluno.codigo ? 'selected' : ''}>
+                            <c:out value="${alturma.nomeAluno}"/>
+                        </option>
+                    </c:forEach>
+                </select>
+                </div>
+                <div class="form-group">                    
+                <label for="pedidoC">Periodo</label><input class="form-control input-lg" type="text" id="pedidoC" name="periodo" value="<c:out value="${turma.periodo}"/>" />
+                </div>
+                <div class="form-group">                    
+                <label for="idturma">Classe</label><input class="form-control input-lg" type="text" id="idturma" name="idTurma" value="<c:out value="${turma.idTurma}"/>" />
+                </div>
+               
+                <input class="btn-lg bg-primary" type="submit" value="Enviar" />
             </form>
-        </div>
-        <div>
+                <br />
             <form method="GET" action="TurmaCtr" name="criaTabelaTurma">
-                
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome do Aluno</th>
+                            <th>Periódo</th>
+                            <th>Classe</th>
+                            <th colspan="2">Atualizar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach items="${turmas}" var="listTurma">
+                            <tr>
+                                <td><c:out value="${listTurma.codigo}" /></td>                                
+                                <td><c:out value="${listTurma.aluno.nomeAluno}" /></td>                                
+                                <td><c:out value="${listTurma.periodo}" /></td>                                
+                                <td><c:out value="${listTurma.idTurma}" /></td>                                
+                                <td><a class="btn btn-success" href="TurmaCtr?action=alterar&codigo=<c:out value="${listTurma.codigo}" />"><span class="glyphicon glyphicon-edit">Editar</span></a></td>                                                           
+                                <td><a class="btn btn-danger" href="TurmaCtr?action=delete&codigo=<c:out value="${listTurma.codigo}" />"><span class="glyphicon glyphicon-trash">Excluir</span></a></td>                                                           
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
             </form>
-        </div>
+        </div><br />
+       
         <div>
             <footer class="panel-footer text-center">
                 <p>Copyright &copy; 2017 Evandro Barbosa</p>

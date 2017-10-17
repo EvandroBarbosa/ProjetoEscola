@@ -45,8 +45,8 @@ public class AlunoDao {
 
     public void updateAluno(Aluno aluno) {
         try {
-            PreparedStatement ps = cnn.prepareStatement("UPDATE aluno SET nome=?,datanascimento=?,"
-                    + "sexo=?,endereco=?,telefone=?,matricula=?,cpf=?)"
+            PreparedStatement ps = cnn.prepareStatement("UPDATE aluno SET nome=?, datanascimento=?, "
+                    + "sexo=?, endereco=?, telefone=?, matricula=?, cpf=?)"
                     + " WHERE id=?");
 
             ps.setString(1, aluno.getNomeAluno());
@@ -56,7 +56,7 @@ public class AlunoDao {
             ps.setString(5, aluno.getTelefoneAluno());
             ps.setString(6, aluno.getMatriculaAluno());
             ps.setString(7, aluno.getCpfAluno());
-            ps.setInt(9, aluno.getCodigo());
+            ps.setInt(8, aluno.getCodigo());
 
             ps.executeUpdate();
         } catch (SQLException e) {
