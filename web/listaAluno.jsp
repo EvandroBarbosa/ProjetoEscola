@@ -42,7 +42,7 @@
                         </ul>                            
                         </li>
                         <li><a href="historia.jsp">História</a></li>
-                        <li><a href="secretaria.jsp">Scretaria</a></li>
+                        <li><a href="secretaria.jsp">Secretaria</a></li>
                         <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
                         <li><a href="TurmaCtr?action=inserir">Turma</a></li>
                     </ul>

@@ -25,7 +25,7 @@
                 <nav class="navbar-fixed-top" >
                     <p>Escola CONHECIMENTOÉAQUI</p>
                     <ul class="list-inline ">
-                        <li><a  href="index.jsp">Home</a></li>                        
+                        <li><a  href="index.jsp"><span class="glyphicon glyphicon-home"></span></a></li>                        
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Cadastre-se Aqui <span class="caret"></span></a>
@@ -36,7 +36,7 @@
                         </ul>                            
                         </li>
                         <li><a href="historia.jsp">História</a></li>
-                        <li><a href="secretaria.jsp">Scretaria</a></li>
+                        <li><a href="secretaria.jsp">Secretaria</a></li>
                         <li><a href="fale-conosco.jsp">Fale Conosco</a></li>
                         <li><a href="TurmaCtr?action=inserir">Turma</a></li>
                     </ul>
